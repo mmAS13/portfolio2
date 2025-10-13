@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PHOTO GRID</title>
+<style>
+*{
+  padding:0px;
+  margin:0px;
+}
+
+.gallery{
+         padding:10px;
+         max-width:1100px;
+         margin:0 auto;
+         background:#f2f2f2;
+         display:grid;
+         grid-gap:10px;
+         grid-templete-columns:repeat(auto-fit,minmax(250px;1fr));
+         grid-auto-rows:250px;
+         grid-auto-flow:dense;
+}
+
+.vertical{
+          grid-row:span 2;
+}
+
+.horizontal{
+          grid-column:span 2;
+}
+
+.big{
+     grid-row:span 2;
+     grid-column:span 2;
+}
+
+.gallery div img{
+                 height:100%;
+                 width:100%;
+                 object-fit:cover;
+}
+
+@media(max-width: 650px)
+{
+ .vertical{
+           grid-row: span 1;
+  }
+ .horizontal{
+             grid-column: span 1;
+ }
+ .big{
+      grid-row: span 1;
+      grid-column: span 1;
+ }
+}
+.big{
+          height:100%;
+          width:100%;
+          object-fit:cover;
+          filter:brightness(0.5) grayscale(100);
+          border-radius:2px;
+          transition:0.3s ease-in-out;
+}   
+ .big:hover{
+               filter:brightness(1) grayscale(0);
+}
+.vertical{
+          height:100%;
+          width:100%;
+          object-fit:cover;
+          filter:brightness(0.5) grayscale(100);
+          border-radius:2px;
+          transition:0.3s ease-in-out;
+}   
+ .vertical:hover{
+               filter:brightness(1) grayscale(0);
+}
+.horizontal{
+          height:100%;
+          width:100%;
+          object-fit:cover;
+          filter:brightness(0.5) grayscale(100);
+          border-radius:2px;
+          transition:0.3s ease-in-out;
+}   
+ .horizontal:hover{
+               filter:brightness(1) grayscale(0);
+}      
+</style>
+</head>
+<body>
+    <div class="gallery">
+      <div class="horizontal">
+         <img src="image1.jpeg"alt="image1"/>
+      </div>
+      <div class="vertical">
+         <img src="image2.jpg"alt="image2"/>
+      </div>
+      <div class="big">
+         <img src="image3.jpg"alt="image3"/>
+      </div>
+      <div class="horizontal">
+         <img src="image4.jpg"alt="image4"/>
+      </div>
+      <div class="vertical">
+         <img src="image5.jpg"alt="image5"/>
+      </div>
+      <div class="big">
+         <img src="image6.jfif"alt="image6"/>
+      </div>
+      <div class="horizontal">
+         <img src="image7.jpg"alt="image7"/>
+      </div>
+      <div class="vertical">
+         <img src="image8.jpg"alt="image8"/>
+      </div>
+      <div class="big">
+         <img src="image9.jfif"alt="image9"/>
+      </div>
+      <div class="horizontal">
+         <img src="image10.webp"alt="image10"/>
+      </div>
+      <div class="vertical">
+         <img src="photo.jpg"alt="image11"/>
+      </div>
+      <div class="big">
+         <img src="image12.jpg"alt="image12"/>
+      </div>
+      <div class="horizontal">
+         <img src="image13.jfif"alt="image13"/>
+      </div>
+      <div class="vertical">
+         <img src="image14.jfif"alt="image14"/>
+      </div>
+      <div class="big">
+         <img src="image15.jfif"alt="image16"/>
+      </div>
+    </div>
+</body>
+</html>
